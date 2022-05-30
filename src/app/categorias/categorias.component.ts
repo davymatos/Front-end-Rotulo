@@ -12,7 +12,7 @@ export class CategoriasComponent implements OnInit {
 
   constructor(private categoriasService: CategoriasService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.listarCategorias();
   }
 
