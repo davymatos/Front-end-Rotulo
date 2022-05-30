@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<h3>Categorias: </h3>
+
+<table border="1px">
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+    </tr>
+    <tr *ngFor="let categoria of categorias">
+        <td>{{categoria.categoria_id}}</td>
+        <td>{{categoria.nome}}</td>
+    </tr>
+</table>
