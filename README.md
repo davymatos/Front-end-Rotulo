@@ -7,7 +7,7 @@
 - Clonar o repositorio
 - Rodar o Back-end
 - Rodar o Projeto
-- ### Comandos:
+- ### Comandos para o AngularJS:
 - git clone https://github.com/davymatos/Front-end-Rotulo
 - cd Front-end-Rotulo
 - ng serve
