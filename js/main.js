@@ -19,14 +19,13 @@ function listaCategorias(categoria) {
     return linha_categoria;
 }
 
-function formaDiv(n_categoria) {
+function visualBusca(n_categoria) {
     result_cat = document.getElementById("div_resultado");
     dado = document.getElementById("visualiza_categoria");
 
     dado.innerHTML = n_categoria.nome
 
     result_cat.appendChild(dado);
-    console.log(result_cat);
     return result_cat;
 }
 
@@ -62,10 +61,35 @@ function listaIngredientes(ingredientes) {
     return linha_ingredientes;
 }
 
+function visualBuscaIng(n_ingredientes) {
+    result_ing = document.getElementById("resultadoIng");
+    nome_en = document.getElementById("nome_en");
+    nome_alt = document.getElementById("nome_alt");
+    nome_br = document.getElementById("nome_br");
+    origem = document.getElementById("origem");
+    funcao_principal = document.getElementById("funcao_principal");
+    categoria = document.getElementById("categoria");
+
+    nome_en.innerHTML = n_ingredientes.nome_en
+    nome_alt.innerHTML = n_ingredientes.nome_alt
+    nome_br.innerHTML = n_ingredientes.nome_br
+    origem.innerHTML = n_ingredientes.origem
+    funcao_principal.innerHTML = n_ingredientes.funcao_principal
+    categoria.innerHTML = n_ingredientes.categoria
+
+    result_ing.appendChild(nome_en);
+    result_ing.appendChild(nome_alt);
+    result_ing.appendChild(nome_br);
+    result_ing.appendChild(origem);
+    result_ing.appendChild(funcao_principal);
+    result_ing.appendChild(categoria);
+
+    return result_ing;
+}
+
 function main() {
     let dados_categoria = get("http://127.0.0.1:8000/categorias/");
     let categorias = JSON.parse(dados_categoria);
-    console.log(dados_categoria);
     let tabela_cat = document.getElementById("tabela_cat");
     categorias.forEach(element => {
         let linha_categoria = listaCategorias(element);
@@ -79,21 +103,41 @@ function main() {
             return categoria.nome == query.value;
         });
 
-        console.log(result);
         let div_cat = document.getElementById("resultado");
         result.forEach(element => {
-            let result_cat = formaDiv(element);
+            let result_cat = visualBusca(element);
             div_cat.appendChild(result_cat);
         });
     };
 
-    let data_ing = get("http://127.0.0.1:8000/ingredientes/");
-    let ing = JSON.parse(data_ing);
+    let data_ingrediente = get("http://127.0.0.1:8000/ingredientes/");
+    let ingredientes = JSON.parse(data_ingrediente);
     let tabela_ing = document.getElementById("tabela_ing");
-    ing.forEach(element => {
+    ingredientes.forEach(element => {
         let linha_ingredientes = listaIngredientes(element);
         tabela_ing.appendChild(linha_ingredientes);
     });
+
+    let query1 = document.getElementById("query1");
+
+    document.getElementById("filter1").onclick = function() {
+        let result1 = ingredientes.filter(function(ingredientes) {
+            if (ingredientes.categoria == 1) {
+                ingredientes.categoria = "Produtos Saneantes";
+            } else if (ingredientes.categoria == 2) {
+                ingredientes.categoria = "Produtos Corporais";
+            } else if (ingredientes.categoria == 3) {
+                ingredientes.categoria = "Produtos Alimenticios";
+            }
+            return ingredientes.nome_br == query1.value;
+        });
+
+        let div_ing = document.getElementById("resultadoIng");
+        result1.forEach(element => {
+            let result_ing = visualBuscaIng(element);
+            div_ing.appendChild(result_ing);
+        });
+    };
 }
 
 main()
