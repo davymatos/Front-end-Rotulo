@@ -4,57 +4,27 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>API</title>
+    <title>"O que é isso no meu rotulo?"</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>Consumindo API com JavaScript</h1>
-    <h3>Categorias:</h3>
-    <input type="text" id="query" />
-    <input type="button" id="filter" value="Filtrar" />
-    <div id="resultado">
-        <div id="div_resultado">
-            <p id="visualiza_categoria"></p>
-        </div>
-    </div>
-    <br><br>
-    <table id="tabela_cat" border="1px">
-        <tr>
-            <th>Id</th>
-            <th>Nome</th>
-        </tr>
-    </table>
-    <br><br>
-    <h3>Ingredientes:</h3>
-    <input type="text" id="query1" />
-    <input type="button" id="filter1" value="Filtrar" />
+    <h1>"O que é isso no meu rotulo?"</h1>
+    <h3>Busca:</h3>
+    <input type="text" id="query" placeholder="Digite o ingrediente..." />
+    <input type="button" id="filter" value="Pesquisar" />
     <div id="resultadoIng">
         <div id="div_resultadoIng">
+            <h3 id="nome_br"></h3>
             <p id="nome_en"></p>
             <p id="nome_alt"></p>
-            <p id="nome_br"></p>
             <p id="origem"></p>
             <p id="funcao_principal"></p>
             <p id="categoria"></p>
         </div>
     </div>
-    <br><br>
-    <table id="tabela_ing" border="1px">
-        <tr>
-            <th>Id</th>
-            <th>Nome em Inglês</th>
-            <th>Nome Alternativo</th>
-            <th>Nome em Português</th>
-            <th>Origem</th>
-            <th>Função Principal</th>
-            <th>Referência</th>
-            <th>Categoria</th>
-        </tr>
-    </table>
-
     <script src="js/main.js"></script>
 </body>
 
