@@ -53,6 +53,39 @@ function visualBuscaIng(n_ingredientes) {
     categoria.innerHTML = n_ingredientes.categoria
 }
 
+// function teste() {
+//     let data_ingrediente = get("http://127.0.0.1:8000/ingredientes/");
+//     let ingredientes = JSON.parse(data_ingrediente);
+
+//     let result1 = ingredientes.filter(function(ingredientes) {
+//         if (ingredientes.categoria == 1) {
+//             ingredientes.categoria = "Produtos Saneantes";
+//         } else if (ingredientes.categoria == 2) {
+//             ingredientes.categoria = "Produtos Corporais";
+//         } else if (ingredientes.categoria == 3) {
+//             ingredientes.categoria = "Produtos Alimenticios";
+//         }
+//         return ingredientes.nome_br == query.value;
+//     });
+
+//     result1.forEach(element => {
+//         let result_ing = visualBuscaIng(element);
+//         return result_ing;
+//     });
+// }
+
+// function passaValor(valor) {
+//     window.location = "visualizar.html?ingrediente=" + valor;
+//     teste();
+// }
+
+// function main() {
+//     let query = document.getElementById("query");
+//     document.getElementById("filter").onclick = function() {
+//         let foi = query.value;
+//         passaValor(foi);
+//     };
+// }
 
 function main() {
     let data_ingrediente = get("http://127.0.0.1:8000/ingredientes/");
