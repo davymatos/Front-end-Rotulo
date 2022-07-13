@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>"O que é isso no meu rotulo?"</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <script src="js/post_ing.js"></script>
+    <h3>Cadastro de Ingredientes</h3>
+    <form onsubmit="cadastrar_ing()">
+        <label for="nome_en">Nome em Inglês</label>
+        <input name="nome_en" id="nome_en" type="text">
+        <br><br>
+        <label for="nome_alt">Nome Alternativo</label>
+        <input name="nome_alt" id="nome_alt" type="text">
+        <br><br>
+        <label for="nome_br">Nome em Português</label>
+        <input name="nome_br" id="nome_br" type="text">
+        <br><br>
+        <label for="origem">Origem</label>
+        <input name="origem" id="origem" type="text">
+        <br><br>
+        <label for="funcao_principal">Função Principal</label>
+        <input name="funcao_principal" id="funcao_principal" type="text">
+        <br><br>
+        <label for="categoria">Categoria</label>
+        <select name="categoria" id="categoria">
+            <option value="1">Produtos Saneantes</option>
+            <option value="2">Produtos Corporais</option>
+            <option value="3">Produtos Alimenticios</option>
+        </select>
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
