@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <Busca />
-  </div>
+  <Busca />
 </template>
 
 <script>

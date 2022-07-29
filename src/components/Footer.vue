@@ -16,7 +16,7 @@ export default {
     position: absolute;
     padding: 5px;
     top: 90%;
-    left: 550px;
+    left: 520px;
     display: block;
     position: absolute;
     align-items: center;

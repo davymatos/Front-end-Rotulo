@@ -1,21 +1,16 @@
-/* import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/IndexView.vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import IndexView from '../views/IndexView.vue'
 
 const routes = [{
-        path: '/',
-        name: 'home',
-        component: HomeView
-    },
-    {
-        path: '/index',
-        name: 'index',
-        component: IndexView
-    }
-]
+    path: '/',
+    name: 'index',
+    component: () =>
+        import ('../views/IndexView.vue')
+}, ]
 
 const router = createRouter({
     history: createWebHashHistory(),
     routes
 })
 
-export default router*/
+export default router

@@ -3,9 +3,9 @@
         <img src="../assets/miniLogo.png" alt="Logotipo" id="logotipo">
         <nav id="navBar">
             <div topnav>
-                <router-link to="index.html" class="itemMenu">Início &nbsp;&nbsp;|</router-link>
-                <router-link to="projeto.html" class="itemMenu">O Projeto &nbsp;&nbsp;|</router-link>
-                <router-link class="itemMenu" to="/lista">Contato</router-link>
+                <a href="index.html" class="itemMenu">Início &nbsp;&nbsp;|</a>
+                <a href="projeto.html" class="itemMenu">O Projeto &nbsp;&nbsp;|</a>
+                <a class="itemMenu" href="/lista">Contato</a>
             </div>
         </nav>
     </header>

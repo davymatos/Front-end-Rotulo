@@ -71,7 +71,7 @@ export default {
   height: 300px;
   display: flexbox;
   margin-left: 400px;
-  margin-top: 0px;
+  margin-top: -60px;
 }
 
 @media screen and (max-width: 680px) {   
