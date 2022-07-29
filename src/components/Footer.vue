@@ -5,11 +5,37 @@
 </template>
 
 <script>
-    export default {
-    name: "Navbar"
-    }
+export default {
+    name: 'Footer'
+}
 </script>
 
-<style>
- 
+<style scoped>
+    .footer {
+    text-align: center;
+    position: absolute;
+    padding: 5px;
+    top: 90%;
+    left: 550px;
+    display: block;
+    position: absolute;
+    align-items: center;
+    align-content: center;
+}
+
+.textFooter{
+    font-size: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 680px) {
+    .footer {
+        top: 135%;
+        display: flex;
+        position: absolute;
+        margin-left: 30px;
+    }
+
+}
+
 </style>

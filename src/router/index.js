@@ -1,5 +1,5 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+/* import { createRouter, createWebHashHistory } from 'vue-router'
+import HomeView from '../views/IndexView.vue'
 
 const routes = [{
         path: '/',
@@ -18,4 +18,4 @@ const router = createRouter({
     routes
 })
 
-export default router
+export default router*/

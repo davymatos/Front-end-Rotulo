@@ -7,7 +7,7 @@
 <script>
     import Busca from "../components/Busca.vue"
     export default{
-        name: "IndexView",
+        name: 'IndexView',
         components:{
         Busca
         }
